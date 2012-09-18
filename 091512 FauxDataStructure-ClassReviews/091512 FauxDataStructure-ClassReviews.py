@@ -90,33 +90,45 @@ class classobject(object):
 	def __init__(self, data=None): #none is a datatype
 		print "Creating new class:", data.get('name')
 		self.name = data.get('name')
-		self.weight = data.get('weight')
-		self.type = data.get('type')
-		self.color = data.get('color')
+		self.professor = data.get('professor')
+		self.term = data.get('term')
+		self.year = data.get('year')
+	
+
+#Create a class for the reviews
+print "*" *75 
+class reviewobject(object):
+
+	# __init__ automatically called when creating an object
+	def __init__(self, review=None): #none is a datatype
+		print "Creating new review:", review.get('coursename')
+		self.name = review.get('coursename')
+		self.year = review.get('year')
+		self.date = review.get('review_date')
+		self.comment = review.get('review_comment')	
+		self.usefulness = review.get('reviewusefulnessindex')
 		
 	
-	# def set_name(self, name):
-	# 		self.name = name
-	# 		
-	# def cheerfor(self):
-	# 			return self.name + "Candybar"
-	
 #create an object using the class
-# classobject(Lindt)
+classobject(Dynamic_Web_Development)
+print "*" *75 
+reviewobject(Review)
+
 
 
 # Create a list of the objects
-# classobjectlist=[]		
-# for class in Classlist:
-# 	classobjectlist.append( classobject(class) )
+print "*" *75 
+classobjectlist=[]		
+for classes in Classlist:
+	classobjectlist.append( classobject(classes) )
 # 
-# #Print the list of class objects weight
-# for classobject in classobjectlist: 
-# 	print "*" *75 
-# 	print classobject.name
-# 	print classobject.weight
-# 	print classobject.type
-# 	print classobject.color
+#Print the list of class objects weight
+for classobject in classobjectlist: 
+	print "*" *75 
+	print classobject.name
+	print classobject.professor
+	print classobject.term
+	print classobject.year
 # print "*" *75 
 # for classobject in classobjectlist: 
 # 	print "*" *75 
